@@ -1,0 +1,115 @@
+<style type='text/css'>
+    .main{
+        width: 1000px;
+        height: auto;
+        border: 0.5px solid #e67e22;
+        padding: 6px;
+        margin-top: 30px;
+        border-radius: 10px;
+        background-color: aquamarine;
+    }
+    .root{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .heading{
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border:0.5px #000000;
+        padding: 6px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: coral;
+    }
+    .title {
+        color: #FFFFFF;
+    }
+    .button{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .buttonset{
+        width: 120px;
+        margin: 6px;
+    }
+ .msg{
+     align-content: center;
+     justify-content: center;
+     display: flex;
+ }
+</style>
+
+
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+<script src='/static/MenuCategory.js' crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display|Item_ID </title>
+</head>
+<body>
+<form action="/menucategoryitemeditdelete" method="post" enctype="multipart/form-data"> {% csrf_token%}
+<div class="root">
+    <div class="main">
+        <div class="heading">
+            <h3 class="title"><b>Update Item</b></h3>
+        </div>
+
+
+            <div class="form-group">
+                <label >Category Name</label>
+                <select id="cid" name="cid" class="form-control">
+                    <option value="{{row.1}}">{{row.6}}</option>
+                </select>
+
+            </div>
+
+             <div class="form-group">
+                <label  hidden>Item ID</label>
+                <input type="text" class="form-control" value='{{row.0}}' hidden name="itemid"  readonly="true" >
+            </div>
+
+            <div class="form-group">
+                <label >Item Name</label>
+                <input type="text" class="form-control" value='{{row.2}}' name="itemname" placeholder="Enter Item Name">
+            </div>
+
+            <div class="form-group">
+                <label >Item Description</label>
+                <input type="text" class="form-control"  value='{{row.3}}' name="itemdes" placeholder="Enter Item Description">
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <label >Price(Full)&nbsp;Rs.</label>
+                    <input type="text" class="form-control" value='{{row.4}}' name="pf" placeholder="Enter Price Full">
+                </div>
+
+                 <div class="col">
+                    <label >Price(Half)&nbsp;Rs.</label>
+                    <input type="text" class="form-control" value='{{row.5}}' name="ph" placeholder="Enter Price Half">
+                </div>
+            </div>
+
+            <br><div class="form-group button">
+                <input type="submit" name ="btn" value="Edit" class="btn btn-primary buttonset">
+                <input type="submit" name ="btn" value="Delete" class="btn btn-primary buttonset">
+            </div>
+
+    </div>
+</div>
+</form>
+</body>
+</html>

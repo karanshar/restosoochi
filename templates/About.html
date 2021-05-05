@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-------------------------------------HEADING------------------------------------------------------------------------->
+
+<head>
+	<meta charset ="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>About-page of RestoSoochi| Contactless Menu for Restaurants</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<!-------------------------------------HEADING Close------------------------------------------------------------------------->
+<!-----------------------------------------Body start------------------------------------------------------------------------>
+<!-----------------------------------------------TOP SECTION----------------------------------------------------------------->
+<body>
+	<div class="header">
+		<div class="container"> 
+			<!-----------------------------------------------NAVIGATION----------------------------------------->
+			<div class="navbar">
+				<div class="logo">
+				<a href="Home.html"><img src="/static/images/1logo.png" width="150px" class="logo"></a>
+			</div>
+			<nav>
+				<ul id="MenuItems">
+                    <li> <a href="/menu">Menu Page</a></li>
+					<li> <a href="/Home">Home</a></li>
+					<li> <a href="/Products">Products</a></li>
+					<li> <a href="/About">About</a></li>
+					<li> <a href="/Contact">Contact</a></li>
+					<li> <a href="/restosoochi">User_Login</a></li>
+                    <li> <a href="/userregister">User_Register</a></li>
+				</ul>
+			</nav>
+			<a href="/QR" ><img src="/static/images/cart.jpg" width="30px" height="30px" class="cart"></a>
+			<img src="/static/images/Menu.png" class="menu-icon" onclick="menutoggle()">
+			</div>
+			<div class="row"><img src="/static/images/Bimage.png" ></div>
+			<hr>
+			<hr>
+			<!-----------------------------------------------NAVIGATION CLOSE----------------------------------------->
+			<!-----------------------------------------------INTRO----------------------------------------->
+			<div class="row">
+				<div class="col-2">
+					<h3> Why should you create a QR Code for your menu?</h3>
+					<p align="centre"> The coronavirus (COVID-19) pandemic has now spread across the entire globe and the recovery of the hospitality industry will likely take a while. It is already clear that coronavirus can spread through touching contaminated surfaces. This puts establishments such as your restaurant in the spot as most of the surface is shared by different people every day. While cleaning and disinfecting tables and bars a good start, there is still one thing that people need and share; menus. So how can you eliminate the sharing of physical menus between customers? The answer is simple, replace the menu with Digital Menu by QR Code! Scanning</p>
+				</div> 
+				<div class="col-2">
+				<img src="/static/images/Why.jpg" style="border-radius:50px; width: 500px;" >
+				</div>
+			</div>
+			<hr>
+			<hr>
+			<section class="key-benefits-section">
+			<div class="wrapper-all">
+				<div class="container"><div class="row"><div class="col-12"><h2 class="vs-app-title">Key Benefit!</h2></div> <div class="col-xl-8 offset-xl-2"><p class="key-benefits-content"><span class="key-benefits-number">1</span> <span class="key-benefits-texts">Quick access to your restaurant’s digital menu without downloading any specific App</span></p> <p class="key-benefits-content"><span class="key-benefits-number">2</span> <span class="key-benefits-texts">No waiting in queue for ordering or waving hand for the waiter</span></p> <p class="key-benefits-content"><span class="key-benefits-number">3</span> <span class="key-benefits-texts">Less human error as customers can directly place orders after seeing the dish for a food item.</span></p> <p class="key-benefits-content"><span class="key-benefits-number">4</span> <span class="key-benefits-texts">Easy to add item, updating price or remove items from the menu without reprinting QR code</span></p> <p class="key-benefits-content"><span class="key-benefits-number">5</span> <span class="key-benefits-texts">Know your restaurant most popular item and make more revenue by highlighting it in menu</span></p> <p class="key-benefits-content"><span class="key-benefits-number">6</span> <span class="key-benefits-texts">Protect your customer with contactless ordering</span></p> <p class="key-benefits-content"><span class="key-benefits-number">7</span> <span class="key-benefits-texts">Time saving for restaurant staff as they don’t have to reprint paper menus or the QR codes.</span></p></div></div></div></div></section>
+			<!-----------------------------------------------INTRO CLOSE----------------------------------------->
+			<br>
+			<br>
+</div>
+</div>
+
+<!------------------------------------------------footer---------------------------------------------------------->
+<div class="footer">
+	<div class="container"> 
+		<div class="row">
+			<div class="footer-col-1">
+				<img src="/static/images/1logo.png" width="300px">
+				<p>Join us in making your place more safe to eat.</p>
+			</div>
+			<div class="footer-col-2">
+				<h3>Follow Us </h3>
+			<ul  style="list-style-type:none;">
+				<li><a href="#" class="fa fa-facebook">  Facebook</a></li>
+				<li><a href="#" class="fa fa-twitter">  Twitter</a></li>
+				<li><a href="#" class="fa fa-instagram">  Instagram</a></li>
+				<li><a href="#" class="fa fa-youtube">  YouTube</a></li>
+			</ul>
+			
+			</div>
+		</div>
+		<hr>
+			<p class="copyright"><span>&#169;</span> Copyright 2021, RestoSoochi Private Limited.</p>
+	</div>
+</div>
+<!---------------------------------------Footer close -------------------------------------------------------------->
+<!---------------------------------------js for toggle menu--------------------------------------------------------->
+<script >
+	var MenuItems=document.getElementById("MenuItems");
+	MenuItems.style.maxHeight="0px";
+	function menutoggle(){
+		if(MenuItems.style.maxHeight== "0px")
+		{
+			MenuItems.style.maxHeight="200px"
+		}
+			else
+			{
+				MenuItems.style.maxHeight="0px"
+			}
+		}
+	
+</script>
+<!---------------------------------------js for toggle menu close--------------------------------------------------------->
+</body>  
+<!-------------------------------------Body Close------------------------------------------------------------------------->
+</html>

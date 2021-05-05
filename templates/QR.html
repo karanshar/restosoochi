@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-------------------------------------HEADING------------------------------------------------------------------------->
+
+<head>
+	<meta charset ="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<style>
+	.qr-code {
+	max-width: 200px;
+	margin: 10px;
+	}
+</style>
+
+<title>QR Code Generator</title>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<!-------------------------------------HEADING Close------------------------------------------------------------------------->
+<!-----------------------------------------Body start------------------------------------------------------------------------>
+<!-----------------------------------------------TOP SECTION----------------------------------------------------------------->
+<body>
+	<div class="header">
+		<div class="container"> 
+			<!-----------------------------------------------NAVIGATION----------------------------------------->
+			<div class="navbar">
+				<div class="logo">
+				<a href="Home.html"><img src="/static/images/1logo.png" width="150px" class="logo"></a>
+			</div>
+			<nav>
+				<ul id="MenuItems">
+                    <li> <a href="/menu">Menu Page</a></li>
+                    <li> <a href="/Home">Home</a></li>
+					<li> <a href="/Products">Products</a></li>
+					<li> <a href="/About">About</a></li>
+					<li> <a href="/Contact">Contact</a></li>
+					<li> <a href="/restosoochi">User_Login</a></li>
+                    <li> <a href="/userregister">User_Register</a></li>
+					</ul>
+			</nav>
+			<a href="/QR"><img src="/static/images/cart.jpg" width="30px" height="30px" class="cart"></a>
+			<img src="/static/images/Menu.png" class="menu-icon" onclick="menutoggle()">
+			</div>
+			<hr>
+			<hr>
+			<!-----------------------------------------------NAVIGATION CLOSE----------------------------------------->
+</div>
+</div>
+
+<!-----------------------------------------------TOP SECTION CLOSE------------------------------------------------------------>
+<!------------------------------------------------featured Categories--------------------------------------------------->
+<div class="categories">
+	<div class="small-container"> 
+		<h2 class="title">QR Code Generator</h2> 
+		<div class="row">
+		<div class="container-fluid">
+	<div class="text-center">
+
+	<!-- Get a Placeholder image initially,
+	this will change according to the
+	data entered later -->
+	<img src=
+"https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+		class="qr-code img-thumbnail img-responsive" />
+	</div>
+
+	<div class="form-horizontal">
+	<div class="form-group">
+		<label class="control-label col-sm-2"
+		for="content">
+		Content:
+		</label>
+		<div class="col-sm-10">
+
+		<!-- Input box to enter the
+			required data -->
+		<input type="text" size="60"
+			maxlength="60" class="form-control"
+			id="content" placeholder="Enter content" />
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+
+		<!-- Button to generate QR Code for
+		the entered data -->
+		<button type="button" class=
+			"btn btn-default" id="generate">
+			Generate
+		</button>
+		<button type="button" class=
+			"btn btn-default" onclick = "window.print()">
+			Print
+		</button>
+		</div>
+	</div>
+	</div>
+</div>
+		</div>
+	</div>	
+</div>
+<!------------------------------------------------featured Categories CLOSE---------------------------------------------->
+<!------------------------------------------------------Product Implementation---------------------------------------------------------------------->
+<div class="offer">
+	<div class="small-container">
+		<div class="row">
+				<div class="col-2">
+					<h2 style="color: red;"><u>Implementation Methods</u> </h2>
+					<br>
+					<ol>
+  					<li><p>First, select a template and download it.</p></li>
+  					<br>
+  					<li><p>Open it with any image editing tool of your choice.</p></li>
+  					<br>
+  					<li><p>Insert your QR Code in the empty box provided.</p></li>
+  					<br>
+  					<li><p>Adjust the size of the QR Code by dragging the corner to fit the empty box slot. Always drag from the corner to maintain its original shape and do not drag from the top, bottom, or sides.</p></li>
+  					<br>
+  					<li><p>Save and export the image in a high-quality print format.</p></li>
+					</ol>
+					<br>
+				</div> 
+				<div class="col-2">
+					<h2 style="color: red;"><u>IMPORTANT</u></h2>
+				<img src="/static/images/Menu2.png">
+				<p>Test your QR Code to ensure it’s still scannable every step of the way. Dragging or resizing the QR Code can sometimes result in blurry or unrecognizable shapes.</p>
+				</div>
+			</div>
+	</div>
+</div>
+
+<!------------------------------------------------------Product IMplementaion close-------------------------------------------------------------------->
+
+
+<!------------------------------------------------footer---------------------------------------------------------->
+<div class="footer">
+	<div class="container"> 
+		<div class="row">
+			<div class="footer-col-1">
+				<img src="/static/images/1logo.png" width="300px">
+				<p>Join us in making your place more safe to eat.</p>
+			</div>
+			<div class="footer-col-2">
+				<h3>Follow Us </h3>
+			<ul  style="list-style-type:none;">
+				<li><a href="#" class="fa fa-facebook">  Facebook</a></li>
+				<li><a href="#" class="fa fa-twitter">  Twitter</a></li>
+				<li><a href="#" class="fa fa-instagram">  Instagram</a></li>
+				<li><a href="#" class="fa fa-youtube">  YouTube</a></li>
+			</ul>
+			
+			</div>
+		</div>
+		<hr>
+			<p class="copyright"><span>&#169;</span> Copyright 2021, RestoSoochi Private Limited.</p>
+	</div>
+</div>
+<!---------------------------------------Footer close -------------------------------------------------------------->
+<!---------------------------------------js for toggle menu--------------------------------------------------------->
+
+<!---------------------------------------QR PAGE--------------------------------------------------------->
+<script src=
+	"https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+<script>
+	// Function to HTML encode the text
+	// This creates a new hidden element,
+	// inserts the given text into it
+	// and outputs it out as HTML
+	function htmlEncode(value) {
+	return $('<div/>').text(value)
+		.html();
+	}
+
+	$(function () {
+
+	// Specify an onclick function
+	// for the generate button
+	$('#generate').click(function () {
+
+		// Generate the link that would be
+		// used to generate the QR Code
+		// with the given data
+		let finalURL =
+'https://chart.googleapis.com/chart?cht=qr&chl=' +
+		htmlEncode($('#content').val()) +
+		'&chs=160x160&chld=L|0'
+
+		// Replace the src of the image with
+		// the QR code image
+		$('.qr-code').attr('src', finalURL);
+	});
+	});
+</script>
+</body>  
+<!-------------------------------------Body Close------------------------------------------------------------------------->
+</html>

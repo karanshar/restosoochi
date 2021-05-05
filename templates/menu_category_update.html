@@ -1,0 +1,93 @@
+<style type='text/css'>
+    .main{
+        width: 500px;
+        height: auto;
+        border: 0.5px solid #e67e22;
+        padding: 6px;
+        margin-top: 30px;
+        border-radius: 10px;
+        background-color: aquamarine;
+    }
+    .root{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .heading{
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border:0.5px #000000;
+        padding: 6px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: coral;
+    }
+    .title {
+        color: #FFFFFF;
+    }
+    .button{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .buttonset{
+        width: 120px;
+        margin: 6px;
+    }
+ .msg{
+     align-content: center;
+     justify-content: center;
+     display: flex;
+ }
+</style>
+
+
+<!DOCTYPE html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display|Data_ID </title>
+</head>
+<body>
+<form action="/menucategoryeditdelete" method="post" enctype="multipart/form-data"> {% csrf_token%}
+<div class="root">
+    <div class="main">
+        <div class="heading">
+            <h3 class="title"><b>Menu Category</b></h3>
+        </div>
+
+             <div class="form-group">
+                <label >Category ID</label>
+                <input type="text" class="form-control" value='{{row.0}}' name="cid"  readonly="true" >
+            </div>
+
+            <div class="form-group">
+                <label >Category Name</label>
+                <input type="text" class="form-control" value='{{row.1}}' name="cn" placeholder="Enter Category Name">
+            </div>
+
+            <div class="form-group">
+                <label >Category Description</label>
+                <input type="text" class="form-control"  value='{{row.2}}' name="cd" placeholder="Enter Category Description">
+            </div>
+
+            <div class="form-group button">
+                <input type="submit" name ="btn" value="Edit" class="btn btn-primary buttonset">
+                <input type="submit" name ="btn" value="Delete" class="btn btn-primary buttonset">
+            </div>
+
+    </div>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<html lang="en">
+  <!-------------------------------------HEADING------------------------------------------------------------------------->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Create-Menu of RestoSoochi| Contactless Menu for Restaurants</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <!-------------------------------------HEADING Close------------------------------------------------------------------------->
+  <!-----------------------------------------Body start------------------------------------------------------------------------>
+  <!-----------------------------------------------TOP SECTION----------------------------------------------------------------->
+  <body>
+    <div class="header">
+      <div class="container">
+        <!-----------------------------------------------NAVIGATION----------------------------------------->
+        <div class="navbar">
+        <div class="logo">
+        <a href="Home.html"><img src="/static/images/1logo.png" width="150px" class="logo"></a>
+      </div>
+      <nav>
+        <ul id="MenuItems">
+          <div class="btn-group">
+              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu Category
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/menucategory" target="mw">Add Category</a>
+                <a class="dropdown-item" href="/menucategorydisplay" target="mw">Update Category</a>
+              </div>
+          </div>
+          <div class="btn-group">
+              <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Items
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="/menucategoryitem" target="mw">Add Items</a>
+                <a class="dropdown-item" href="/menucategoryitemdisplay" target="mw">Update Items</a>
+              </div>
+          </div>
+            <a href="/logout"><button type="button" class="btn btn-primary">Logout</button></a>
+        </ul>
+      </nav>
+      <a href="#"><img src="/static/images/cart.jpg" width="30px" height="30px" class="cart"></a>
+          <img src="/static/images/Menu.png" class="menu-icon" onclick="menutoggle()" />
+        </div>
+        <hr>
+        <hr>
+        </div>
+        <div>
+        &nbsp;&nbsp;<iframe name="mw" style="border: 2px solid #ff0000;" src="/menucategory" frameborder="1" width="1500" height="700"></iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <!-----------------------------------------------Account page------------------------------------------------------>
+    
+    <!------------------------------------------------footer---------------------------------------------------------->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <img src="/static/images/1logo.png" width="300px" />
+            <p>Join us in making your place more safe to eat.</p>
+          </div>
+          <div class="footer-col-2">
+            <h3>Follow Us</h3>
+            <ul style="list-style-type: none">
+              <li><a href="#" class="fa fa-facebook"> Facebook</a></li>
+              <li><a href="#" class="fa fa-twitter"> Twitter</a></li>
+              <li><a href="#" class="fa fa-instagram"> Instagram</a></li>
+              <li><a href="#" class="fa fa-youtube"> YouTube</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">
+          <span>&#169;</span> Copyright 2021, RestoSoochi Private Limited.
+        </p>
+      </div>
+    </div>
+    <!---------------------------------------Footer close -------------------------------------------------------------->
+    <!---------------------------------------js for toggle menu--------------------------------------------------------->
+
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+    <!---------------------------------------js for toggle menu close--------------------------------------------------------->
+    <!---------------------------------------js for create form --------------------------------------------------------->
+    <script>
+      const formEl=document.querySelector("form");
+      const tbodyEl =document.querySelector("tbody");
+      const tableEl =document.querySelector("table");
+
+
+      function onAddwebsite(e){
+        e.preventDefault();
+        const name=document.getElementById("name").value;
+         const price=document.getElementById("price").value;
+          const information=document.getElementById("information").value;
+          tbodyEl.innerHTML +='
+          <tr>
+            <td>${ Dish Name}</td>
+            <td>${Dish Price}</td>
+            <td>${Dish Information}</td>
+            <td class="col-4"><button class="deleteBtn">Delete</button></td>
+            </tr>
+            ';
+      }
+
+      function onDeleteRow(e){
+        if(!e.target.classList.contains("deleteBtn")){
+          return;
+        }
+        const btn=e.target;
+        btn.closet("tr").remove();
+      }
+      formEl.addEventListener("submit",onAddwebsite);
+      tableEl.addEventListener("click",onDeleteRow);
+    </script>
+    <!---------------------------------------js for create form close--------------------------------------------------------->
+
+  </body>
+  <!-------------------------------------Body Close------------------------------------------------------------------------->
+</html>
